@@ -21,6 +21,7 @@ mongoose.connect(process.env.MONGO_URL)
 
 
 //ミドルウェア
+app.use(express.json());
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postsRoute);
